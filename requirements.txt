@@ -1,0 +1,11 @@
+numpy
+pandas
+xarray
+zarr
+PyYAML
+Flask
+matplotlib
+streamlit
+openpyxl
+tifffile
+pytest

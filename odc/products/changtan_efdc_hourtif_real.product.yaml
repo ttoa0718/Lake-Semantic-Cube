@@ -1,0 +1,11 @@
+name: changtan_efdc_hourtif_real
+description: Changtan EFDC hourly water-quality GeoTIFF collection
+metadata_type: eo3
+metadata:
+  product:
+    name: changtan_efdc_hourtif_real
+measurements:
+  - name: value
+    dtype: float32
+    units: unknown
+    nodata: NaN

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lake Semantic Cube UI</title>
+    <link rel="stylesheet" href="/static/app.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="map-pane">
+        <div class="toolbar">
+          <div class="brand">Lake Semantic Cube</div>
+          <div class="controls">
+            <button class="icon-button active" id="pointMode" title="Point query" aria-label="Point query">＋</button>
+            <button class="icon-button" id="boxMode" title="Region query" aria-label="Region query">□</button>
+            <select id="semanticSelect" aria-label="Semantic layer"></select>
+          </div>
+        </div>
+        <div class="map-wrap" id="mapWrap">
+          <img id="mapImage" alt="Example lake TIF preview" />
+          <canvas id="overlay"></canvas>
+        </div>
+        <div class="status" id="status">Loading data source...</div>
+      </section>
+
+      <aside class="result-pane">
+        <div class="result-head">
+          <h1 id="resultTitle">Semantic Layer Explorer</h1>
+          <button class="icon-button" id="closeResult" title="Clear result" aria-label="Clear result">×</button>
+        </div>
+        <div class="summary-grid" id="summaryGrid"></div>
+        <div class="figure-frame">
+          <img id="resultImage" alt="Semantic query result" />
+        </div>
+      </aside>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+project:
+  name: lake_semantic_project
+  root: .
+
+paths:
+  model_tif_root: data/model_tif
+  surface_tif_root: data/surface_tif
+  profile_table: data/profile_observations.csv
+  base_zarr: data/base_model.zarr
+  surface_zarr: data/surface.zarr
+  semantic_zarr_dir: data/semantic_zarr
+  catalog: data/catalog.json
+
+time:
+  start_time: "2025-01-01T00:00:00"
+  model_hour_base: 1
+
+variables:
+  14:
+    name: NHX
+    unit: mg/L
+  18:
+    name: COD
+    unit: mg/L
+  19:
+    name: DOX
+    unit: mg/L
+  23:
+    name: CHL
+    unit: ug/L
+  TEMP:
+    name: TEMP
+    unit: degC
+
+model:
+  dimensions: [time, layer, y, x]
+
+surface:
+  dimensions: [time, y, x]
+  vertical_support: surface
+
+profile:
+  structure: time_station_actual_depth_table
+
+vertical:
+  type: sigma
+  layer_order: surface_to_bottom
+  sigma_edges: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+
+base_zarr:
+  chunks:
+    time: 24
+    layer: all
+    y: 64
+    x: 64
+
+semantic_zarr:
+  product: lake_vertical_semantic_zarr
+
+odc:
+  mode: metadata_only
+  product_base: lake_model_zarr
+  product_semantic: lake_vertical_semantic_zarr
+
+rules:
+  directory: rules
+
+query:
+  default_product_type: model

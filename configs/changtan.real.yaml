@@ -1,0 +1,120 @@
+project:
+  name: changtan_real_semantic_project
+  root: .
+
+paths:
+  efdc_root: efdc_hour
+  efdc_hourtif: efdc_hour/hourtif
+  efdc_hourtif_expend: efdc_hour/test_tif_expend
+  efdc_zarr_full: efdc_hour/Changtan_wq_expend.zarr
+  efdc_zarr_parts: efdc_hour/Changtan_wq_zarr_12parts_expend
+  remote_sensing_tif_root: tif/S02093_Changtan
+  profile_table: 剖面浮标.csv
+  profile_points: changtan_profile_buoy_point.xlsx
+  reservoir_shape: ctshp/changtan_reservoir_polygon.shp
+  semantic_zarr_dir: real_output
+  semantic_hypoxia_dox: real_output/semantic_hypoxia_dox_169h.zarr
+  semantic_ammonium_nhx: real_output/semantic_ammonium_nhx_169h.zarr
+  semantic_codmn: real_output/semantic_codmn_169h.zarr
+  semantic_cyanobacteria_chla: real_output/semantic_cyanobacteria_chla_169h.zarr
+  catalog: real_output/catalog.json
+
+time:
+  efdc_hourtif_start: "2025-10-01T01:00:00"
+  efdc_hourtif_hours: [1, 169]
+  efdc_expend_start: "2025-10-01T01:00:00"
+  efdc_expend_hours: [1, 2160]
+
+variables:
+  1:
+    name: CHC
+    unit: "1"
+  2:
+    name: CHG
+    unit: "1"
+  3:
+    name: CHD
+    unit: "1"
+  14:
+    name: NHX
+    unit: mg/L
+  18:
+    name: COD
+    unit: mg/L
+  19:
+    name: DOX
+    unit: mg/L
+
+vertical:
+  layer_order: bottom_to_surface
+  layer_depth_m:
+    1: 30
+    2: 27
+    3: 24
+    4: 21
+    5: 18
+    6: 15
+    7: 12
+    8: 9
+    9: 6
+    10: 3
+
+semantic_rules:
+  hypoxia_layer:
+    variable: DOX
+    idx: 19
+    operator: "<"
+    threshold: 7.2
+    unit: mg/L
+    label: Hypoxia layer
+    upper_label: Hypoxia layer upper boundary
+    lower_label: Hypoxia layer lower boundary
+    raw_range: [0, 9]
+    display_range: [0, 12]
+    semantic_zarr: real_output/semantic_hypoxia_dox_169h.zarr
+  ammonium_enriched_layer:
+    variable: NHX
+    idx: 14
+    operator: ">"
+    threshold: 0.01
+    unit: mg/L
+    label: Ammonium-enriched layer
+    upper_label: Ammonium-enriched layer upper boundary
+    lower_label: Ammonium-enriched layer lower boundary
+    raw_range: [0, 0.04]
+    display_range: [0, 0.3]
+    semantic_zarr: real_output/semantic_ammonium_nhx_169h.zarr
+  cod_enriched_layer:
+    variable: CODmn
+    idx: 18
+    operator: ">"
+    threshold: 8.0
+    unit: mg/L
+    label: Organic matter-enriched layer
+    upper_label: Organic matter-enriched layer upper boundary
+    lower_label: Organic matter-enriched layer lower boundary
+    raw_range: [0, 12]
+    display_range: [0, 4]
+    semantic_zarr: real_output/semantic_codmn_169h.zarr
+  cyanobacteria_enriched_layer:
+    variable: Chla
+    idx: 1
+    operator: ">"
+    threshold: 0.7
+    unit: ug/L
+    label: Cyanobacteria-enriched layer
+    upper_label: Cyanobacteria-enriched layer upper boundary
+    lower_label: Cyanobacteria-enriched layer lower boundary
+    raw_range: [0, 2]
+    display_range: [0, 80]
+    semantic_zarr: real_output/semantic_cyanobacteria_chla_169h.zarr
+
+odc:
+  existing_products:
+    base_zarr: changtan_wq_zarr_hourly_multi_expend
+    tif: changtan_wq_tif_hourly_indexed_expend_v2
+  real_products:
+    base_tif_collection: changtan_efdc_hourtif_real
+    vertical_semantic: changtan_vertical_semantic_real
+  mode: real_odc_with_local_fallback_catalog
+  generated_yaml: odc_output

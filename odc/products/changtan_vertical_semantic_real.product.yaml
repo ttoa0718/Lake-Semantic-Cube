@@ -1,0 +1,43 @@
+name: changtan_vertical_semantic_real
+description: Changtan vertical semantic-layer products indexed by Open Data Cube
+metadata_type: eo3
+metadata:
+  product:
+    name: changtan_vertical_semantic_real
+measurements:
+  - name: occurrence
+    dtype: uint8
+    units: "1"
+    nodata: 0
+  - name: z_top
+    dtype: float32
+    units: m
+    nodata: NaN
+  - name: z_bottom
+    dtype: float32
+    units: m
+    nodata: NaN
+  - name: thickness
+    dtype: float32
+    units: m
+    nodata: NaN
+  - name: core_depth
+    dtype: float32
+    units: m
+    nodata: NaN
+  - name: segment_count
+    dtype: int16
+    units: "1"
+    nodata: -1
+  - name: layer_start
+    dtype: int16
+    units: "1"
+    nodata: -1
+  - name: layer_end
+    dtype: int16
+    units: "1"
+    nodata: -1
+  - name: semantic_mask
+    dtype: uint8
+    units: "1"
+    nodata: 0

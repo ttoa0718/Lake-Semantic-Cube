@@ -1,0 +1,25 @@
+{
+  "rule_id": "algal_maximum_v1",
+  "rule_version": "1.0",
+  "semantic_type": "algal_maximum_layer",
+  "variables": [
+    {
+      "name": "CHL",
+      "operator": ">",
+      "threshold_type": "percentile",
+      "threshold": 90,
+      "percentile_scope": "global",
+      "unit": "ug/L"
+    }
+  ],
+  "logic": "AND",
+  "vertical_constraints": {
+    "min_continuous_layers": 1,
+    "min_thickness": 0.0
+  },
+  "depth_reference": "surface",
+  "output_attributes": ["occurrence", "z_top", "z_bottom", "thickness", "core_depth", "segment_count", "layer_start", "layer_end"],
+  "metadata": {
+    "description": "High chlorophyll-a layer based on global P90 threshold"
+  }
+}

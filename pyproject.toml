@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lake-semantic-cube"
+version = "0.1.0"
+description = "Vertical semantic indexing and access for multidimensional lake water-environment data"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy",
+  "pandas",
+  "xarray",
+  "zarr",
+  "PyYAML",
+  "Flask",
+  "matplotlib",
+  "streamlit",
+  "openpyxl",
+  "tifffile"
+]
+
+[project.optional-dependencies]
+odc = ["datacube"]
+
+[project.scripts]
+lake-semantic = "lake_semantic_cube.cli:main"
+lake-semantic-cube = "lake_semantic_cube.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "lake_semantic_experiment/tests"]
+pythonpath = ["src"]
+addopts = "-q"

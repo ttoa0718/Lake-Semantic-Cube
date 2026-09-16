@@ -1,0 +1,36 @@
+project:
+  name: synthetic_demo
+  root: .
+
+time:
+  start_time: "2025-01-01T00:00:00"
+  model_hour_base: 1
+
+variables:
+  19:
+    name: DOX
+    unit: mg/L
+  23:
+    name: CHL
+    unit: ug/L
+  TEMP:
+    name: TEMP
+    unit: degC
+
+vertical:
+  type: uniform_relative
+  layer_order: surface_to_bottom
+  layer_count: 4
+
+base_zarr:
+  time_chunk: 2
+  layer_chunk: all
+  y_chunk: 4
+  x_chunk: 4
+
+semantic_zarr:
+  product: demo_semantic
+
+odc:
+  mode: metadata_only
+  catalog_path: demo_output/catalog.json

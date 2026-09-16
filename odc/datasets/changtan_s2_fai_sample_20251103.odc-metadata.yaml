@@ -1,0 +1,31 @@
+$schema: https://schemas.opendatacube.org/dataset
+id: 00000000-0000-4000-8000-000000000101
+label: changtan_s2_fai_sample_20251103
+product:
+  name: changtan_s2_fai_sample
+crs: epsg:4326
+geometry:
+  type: Polygon
+  coordinates:
+    - - [120.988748, 28.515071467968]
+      - [120.988748, 28.6627545]
+      - [121.074447277712, 28.6627545]
+      - [121.074447277712, 28.515071467968]
+      - [120.988748, 28.515071467968]
+grids:
+  default:
+    shape: [1644, 954]
+    transform: [0.000089831527, 0.0, 120.988748, 0.0, -0.000089831527, 28.6627545]
+properties:
+  datetime: "2025-11-03T02:45:11Z"
+  dtr:start_datetime: "2025-11-03T02:45:11Z"
+  dtr:end_datetime: "2025-11-03T02:45:11Z"
+  odc:file_format: GeoTIFF
+  platform: Sentinel-2
+  instrument: MSI
+  region: Changtan Reservoir
+location: file://./examples/sample_data/S2_MSI_20251103024511_S02093_r0010_fai.tif
+measurements:
+  fai:
+    path: S2_MSI_20251103024511_S02093_r0010_fai.tif
+    grid: default

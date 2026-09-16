@@ -1,0 +1,19 @@
+name: lake-semantic-cube
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.10
+  - numpy
+  - pandas
+  - xarray
+  - zarr
+  - pyyaml
+  - flask
+  - matplotlib
+  - streamlit
+  - openpyxl
+  - tifffile
+  - pytest
+  - pip
+  - pip:
+      - -e .

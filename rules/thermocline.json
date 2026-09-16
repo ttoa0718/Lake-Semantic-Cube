@@ -1,0 +1,24 @@
+{
+  "rule_id": "thermocline_v1",
+  "rule_version": "1.0",
+  "semantic_type": "thermocline_layer",
+  "variables": [
+    {
+      "name": "TEMP",
+      "operator": "gradient_abs_gt",
+      "threshold_type": "absolute",
+      "threshold": 0.5,
+      "unit": "degC/m"
+    }
+  ],
+  "logic": "AND",
+  "vertical_constraints": {
+    "min_continuous_layers": 1,
+    "min_thickness": 0.0
+  },
+  "depth_reference": "surface",
+  "output_attributes": ["occurrence", "z_top", "z_bottom", "thickness", "core_depth", "segment_count", "layer_start", "layer_end"],
+  "metadata": {
+    "description": "Thermocline layer based on absolute vertical temperature gradient"
+  }
+}

@@ -1,0 +1,53 @@
+project:
+  name: changtan
+  root: .
+
+paths:
+  model_tif_root: tif
+  profile_csv: 剖面浮标.csv
+  base_zarr: data/changtan_base.zarr
+  semantic_zarr_dir: data/semantic_zarr
+  catalog: data/catalog.json
+
+time:
+  start_time: "2025-10-01T00:00:00"
+  model_hour_base: 1
+
+variables:
+  14:
+    name: NHX
+    unit: mg/L
+  18:
+    name: COD
+    unit: mg/L
+  19:
+    name: DOX
+    unit: mg/L
+  23:
+    name: CHL
+    unit: ug/L
+  TEMP:
+    name: TEMP
+    unit: degC
+
+vertical:
+  type: sigma
+  layer_order: surface_to_bottom
+  sigma_edges: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+
+base_zarr:
+  hours_per_partition: 24
+  partition_count: null
+  time_chunk: 24
+  layer_chunk: all
+  y_chunk: 64
+  x_chunk: 64
+
+odc:
+  mode: metadata_only
+  postgres:
+    host: localhost
+    port: 5432
+    user: postgres
+    password_env: LSC_PG_PASSWORD
+    database: postgres

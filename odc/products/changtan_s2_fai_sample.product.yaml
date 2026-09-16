@@ -1,0 +1,11 @@
+name: changtan_s2_fai_sample
+description: Minimal Changtan Sentinel-2 FAI GeoTIFF sample for ODC setup practice
+metadata_type: eo3
+metadata:
+  product:
+    name: changtan_s2_fai_sample
+measurements:
+  - name: fai
+    dtype: float32
+    units: "1"
+    nodata: 9.969209968386869e+36

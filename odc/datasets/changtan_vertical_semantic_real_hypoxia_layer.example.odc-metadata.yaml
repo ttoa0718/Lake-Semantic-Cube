@@ -1,0 +1,49 @@
+$schema: https://schemas.opendatacube.org/dataset
+id: 00000000-0000-4000-8000-000000000001
+label: changtan_vertical_semantic_real_hypoxia_layer_example
+product:
+  name: changtan_vertical_semantic_real
+crs: epsg:4326
+geometry:
+  type: Polygon
+  coordinates:
+    - - [121.00, 28.50]
+      - [121.00, 28.70]
+      - [121.20, 28.70]
+      - [121.20, 28.50]
+      - [121.00, 28.50]
+grids:
+  default:
+    shape: [100, 100]
+    transform: [0.002, 0.0, 121.0, 0.0, -0.002, 28.7]
+properties:
+  datetime: "2025-10-01T01:00:00Z"
+  dtr:start_datetime: "2025-10-01T01:00:00Z"
+  dtr:end_datetime: "2025-10-08T01:00:00Z"
+  semantic:type: hypoxia_layer
+  semantic:rule_id: hypoxia_layer
+  semantic:rule_version: real-hourtif-v1
+  semantic:source_product: changtan_base_zarr_real
+  semantic:operator: "<"
+  semantic:threshold: 7.2
+  odc:file_format: Zarr
+location: file://./real_output/semantic_hypoxia_dox_169h.zarr
+measurements:
+  occurrence:
+    grid: default
+  z_top:
+    grid: default
+  z_bottom:
+    grid: default
+  thickness:
+    grid: default
+  core_depth:
+    grid: default
+  segment_count:
+    grid: default
+  layer_start:
+    grid: default
+  layer_end:
+    grid: default
+  semantic_mask:
+    grid: default

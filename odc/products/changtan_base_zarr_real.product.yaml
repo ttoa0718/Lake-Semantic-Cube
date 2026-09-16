@@ -1,0 +1,23 @@
+name: changtan_base_zarr_real
+description: Changtan EFDC hourly water-quality Base Zarr indexed by Open Data Cube
+metadata_type: eo3
+metadata:
+  product:
+    name: changtan_base_zarr_real
+measurements:
+  - name: Chla
+    dtype: float32
+    units: ug/L
+    nodata: NaN
+  - name: NHX
+    dtype: float32
+    units: mg/L
+    nodata: NaN
+  - name: CODmn
+    dtype: float32
+    units: mg/L
+    nodata: NaN
+  - name: DOX
+    dtype: float32
+    units: mg/L
+    nodata: NaN

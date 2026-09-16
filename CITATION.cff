@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+title: "Lake Semantic Cube"
+version: "0.1.0"
+date-released: "2026"
+authors:
+  - family-names: "Jiao"
+    given-names: "Yaqin"
+abstract: "A Python software framework for organizing multidimensional lake water-environment data, generating dynamic vertical semantic products, and supporting semantics-driven point and regional queries."
+repository-code: "[GITHUB URL TO BE ADDED]"
+doi: "[ZENODO DOI TO BE ADDED AFTER RELEASE]"
+license: "MIT"
