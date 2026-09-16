@@ -116,8 +116,8 @@ def real_point_query(semantic: str, x: float, y: float) -> tuple[pd.DataFrame, p
     return values, boundary
 
 
-st.set_page_config(page_title="LakeSemCube", layout="wide")
-st.title("LakeSemCube")
+st.set_page_config(page_title="Lake Vertical Semantic Cube", layout="wide")
+st.title("Lake Vertical Semantic Cube")
 st.caption("Vertical semantic indexing and multidimensional lake water-environment data access")
 
 tabs = st.tabs(
@@ -323,3 +323,4 @@ with tabs[6]:
     st.subheader("Runtime Log")
     for item in st.session_state.get("runtime_log", []):
         st.write(item)
+

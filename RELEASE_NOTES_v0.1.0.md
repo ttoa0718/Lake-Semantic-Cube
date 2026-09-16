@@ -2,7 +2,7 @@
 
 ## Software Purpose
 
-Lake Semantic Cube organizes multidimensional lake water-environment data, generates dynamic vertical semantic products, and supports semantic point and regional queries.
+Lake Vertical Semantic Cube organizes multidimensional lake water-environment data, generates dynamic vertical semantic products, and supports semantic point and regional queries.
 
 ## Main Features
 
@@ -46,3 +46,4 @@ Screenshots are included under `docs/figures/`.
 ## Test Status
 
 Verified on Python 3.12.4 with `python -m pytest`: 10 passed, 0 failed, 0 skipped.
+

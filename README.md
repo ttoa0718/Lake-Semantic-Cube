@@ -1,12 +1,12 @@
-# Lake Semantic Cube
+# Lake Vertical Semantic Cube
 
-Lake Semantic Cube is a Python software framework for organizing multidimensional lake water-environment data, generating dynamic vertical semantic products, and supporting semantics-driven point and regional queries.
+Lake Vertical Semantic Cube is a Python software framework for organizing multidimensional lake water-environment data, generating dynamic vertical semantic products, and supporting semantics-driven point and regional queries.
 
-The current release is a research software prototype prepared for SoftwareX review. It implements Base Zarr construction, rule-based vertical semantic processing, Semantic Zarr generation, metadata cataloging through Open Data Cube-compatible YAML, point queries, region-scale semantic thickness queries, and two local user interfaces.
+The current release provides source code, documentation, examples, tests, and minimal sample data for running and inspecting the main software workflows. It implements Base Zarr construction, rule-based vertical semantic processing, Semantic Zarr generation, metadata cataloging through Open Data Cube-compatible YAML, point queries, region-scale semantic thickness queries, and two local user interfaces.
 
 ## Motivation
 
-Fixed model layers do not directly express dynamic vertical environmental structures such as hypoxia layers, ammonium-enriched layers, cyanobacteria-enriched layers, or thermoclines. Lake Semantic Cube materializes these structures as semantic products so query workflows can ask for environmental objects instead of hard-coded layer numbers.
+Fixed model layers do not directly express dynamic vertical environmental structures such as hypoxia layers, ammonium-enriched layers, cyanobacteria-enriched layers, or thermoclines. Lake Vertical Semantic Cube materializes these structures as semantic products so query workflows can ask for environmental objects instead of hard-coded layer numbers.
 
 ## Main Features
 
@@ -216,3 +216,5 @@ See `LICENSE.txt`.
 ## Contact
 
 ttoa0718@163.com
+
+

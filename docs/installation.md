@@ -3,7 +3,7 @@
 ## Conda
 
 ```bash
-git clone [GITHUB URL TO BE ADDED]
+git clone https://github.com/ttoa0718/Lake-Semantic-Cube.git
 cd Lake-Semantic-Cube/softwarex
 conda env create -f environment.yml
 conda activate lake-semantic-cube
@@ -23,3 +23,4 @@ python -m pip install -e .
 ODC is optional for the synthetic demo and required for PostgreSQL-backed catalog discovery. Install and initialize ODC separately, ensure PostgreSQL is available, and place `datacube` on `PATH` or set `DATACUBE_EXE`.
 
 No PostgreSQL password is stored in this repository. Use environment variables or the standard ODC configuration files on the target machine.
+

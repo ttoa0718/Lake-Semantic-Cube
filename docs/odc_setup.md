@@ -1,6 +1,6 @@
 # Open Data Cube Setup Tutorial
 
-This tutorial explains how to configure Open Data Cube (ODC) for Lake Semantic Cube. ODC is used for product and dataset metadata cataloging and dataset discovery. Zarr/xarray or raster readers still perform the array data access.
+This tutorial explains how to configure Open Data Cube (ODC) for Lake Vertical Semantic Cube. ODC is used for product and dataset metadata cataloging and dataset discovery. Zarr/xarray or raster readers still perform the array data access.
 
 ## 1. What You Need
 
@@ -61,7 +61,7 @@ datacube system init
 datacube product list
 ```
 
-If `datacube product list` fails, solve the ODC/PostgreSQL connection first before registering Lake Semantic Cube products.
+If `datacube product list` fails, solve the ODC/PostgreSQL connection first before registering Lake Vertical Semantic Cube products.
 
 ## 4. First Practice With The Minimal Changtan Sample
 
@@ -88,7 +88,7 @@ datacube dataset search product=changtan_s2_fai_sample
 
 This step tests ODC itself using a small public file. It does not test the full vertical semantic EFDC workflow.
 
-## 5. Generate Lake Semantic Cube ODC Metadata
+## 5. Generate Lake Vertical Semantic Cube ODC Metadata
 
 For generated Base Zarr and Semantic Zarr outputs, create ODC YAML from the current project state:
 
@@ -98,7 +98,7 @@ python -m lake_semantic_cube index-odc --output-dir odc_output
 
 This writes product YAML under `odc_output/products/` and dataset YAML under `odc_output/datasets/`. Dataset locations are machine-specific, so regenerate this directory after moving data or changing output paths.
 
-## 6. Register Lake Semantic Cube Products
+## 6. Register Lake Vertical Semantic Cube Products
 
 ```bash
 datacube product add odc_output/products/changtan_efdc_hourtif_real.product.yaml
@@ -149,7 +149,7 @@ These commands require real Base/Semantic Zarr outputs and a working ODC index. 
 2. Run `python -m lake_semantic_cube demo --output demo_output` to verify the software chain without ODC.
 3. Configure PostgreSQL and initialize ODC.
 4. Register `changtan_s2_fai_sample` to verify ODC setup with a tiny public file.
-5. If real EFDC data are available, build Base/Semantic Zarr outputs, run `python -m lake_semantic_cube index-odc --output-dir odc_output`, and register the generated Lake Semantic Cube datasets.
+5. If real EFDC data are available, build Base/Semantic Zarr outputs, run `python -m lake_semantic_cube index-odc --output-dir odc_output`, and register the generated Lake Vertical Semantic Cube datasets.
 
 ## 10. Common ODC Errors
 
@@ -158,3 +158,4 @@ These commands require real Base/Semantic Zarr outputs and a working ODC index. 
 - `datacube product list` fails: check database credentials and PostgreSQL service.
 - Dataset search returns no result: confirm that the dataset was added to the same ODC database and that product names match.
 - CRS/coordinate mismatch: the sample FAI dataset uses `epsg:4326`; real EFDC/Zarr metadata should use coordinates matching the query inputs.
+
