@@ -41,7 +41,7 @@ def build_base_zarr_from_arrays(
             "source_format": "array",
             "layer_order": "surface_to_bottom",
             "vertical_reference_type": "configured",
-            "software_version": "0.1.0",
+            "software_version": "0.1.1",
         }
     )
     if attrs:

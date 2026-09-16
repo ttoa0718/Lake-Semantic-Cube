@@ -34,7 +34,7 @@ def build_surface_zarr_from_arrays(
             "product_type": "surface_regular_grid",
             "vertical_support": "surface",
             "source_format": "array",
-            "software_version": "0.1.0",
+            "software_version": "0.1.1",
         }
     )
     if attrs:

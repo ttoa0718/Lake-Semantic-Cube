@@ -17,7 +17,7 @@
 - Existing historical/report files may mention local paths; they should be excluded from the public release unless sanitized.
 - Shapefile XML metadata under `ctshp/` contains historical local GIS lineage paths; remove XML metadata or sanitize before release if the shapefile is published.
 - Large local EFDC, full remote-sensing scene collections, and generated outputs should not be committed to GitHub. The curated `examples/sample_data/` subset is intentionally small and excludes shapefile XML metadata with local GIS lineage.
-- Zenodo DOI should be added after Zenodo generates the DOI for the GitHub release.
+- Zenodo DOI has been added: https://doi.org/10.5281/zenodo.22795260.
 
 ## Sensitive Information Scan
 

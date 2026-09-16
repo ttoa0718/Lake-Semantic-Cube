@@ -2,11 +2,13 @@
 
 ## C1 Current Code Version
 
-0.1.0
+0.1.1
 
 ## C2 Permanent Link To Code/Repository
 
-https://github.com/ttoa0718/Lake-Semantic-Cube
+Repository: https://github.com/ttoa0718/Lake-Semantic-Cube
+
+Archived release DOI: https://doi.org/10.5281/zenodo.22795260
 
 ## C3 Legal Code License
 

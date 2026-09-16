@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.1] - 2026
+
+- Finalized SoftwareX release metadata with GitHub repository URL, support email, copyright holder, and Zenodo DOI.
+- Added manuscript-facing interface screenshots under `docs/figures/`.
+- Updated package and citation version metadata for the Zenodo-archived release.
+
 ## [0.1.0] - 2026
 
 - Prepared the first SoftwareX-oriented source release of Lake Semantic Cube.

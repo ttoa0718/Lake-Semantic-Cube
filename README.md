@@ -207,6 +207,8 @@ The main SoftwareX illustrative examples are documented in `docs/reproducibility
 
 See `CITATION.cff`.
 
+Software archive DOI: https://doi.org/10.5281/zenodo.22795260
+
 ## License
 
 See `LICENSE.txt`.
