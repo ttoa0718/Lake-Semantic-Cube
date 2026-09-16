@@ -45,7 +45,7 @@ softwarex/
 ## Installation
 
 ```bash
-git clone [GITHUB URL TO BE ADDED]
+git clone https://github.com/ttoa0718/Lake-Semantic-Cube.git
 cd Lake-Semantic-Cube/softwarex
 conda env create -f environment.yml
 conda activate lake-semantic-cube
@@ -172,6 +172,12 @@ python -m lake_semantic_cube ui --port 5050
 
 The Flask UI expects local Changtan data for full real-data operation and falls back only for selected visualization components.
 
+## Screenshots
+
+![Point-query interface and query summary](docs/figures/fig4v1.png)
+
+![Region selection and regional semantic thickness analysis](docs/figures/fig5v1.png)
+
 ## Tests
 
 Tested on Python 3.12.4:
@@ -203,8 +209,8 @@ See `CITATION.cff`.
 
 ## License
 
-See `LICENSE.txt`. Copyright holder must be confirmed by the authors before release.
+See `LICENSE.txt`.
 
 ## Contact
 
-[SUPPORT EMAIL TO BE CONFIRMED]
+ttoa0718@163.com

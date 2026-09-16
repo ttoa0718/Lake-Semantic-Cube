@@ -6,15 +6,15 @@
 
 ## C2 Permanent Link To Code/Repository
 
-TODO - author confirmation required. Use `[GITHUB URL TO BE ADDED]` until the public repository is created.
+https://github.com/ttoa0718/Lake-Semantic-Cube
 
 ## C3 Legal Code License
 
-MIT License, pending author confirmation of copyright holder.
+MIT License. Copyright (c) 2026 Yaqin Jiao.
 
 ## C4 Code Versioning System Used
 
-Git is expected for public release. The current working directory should be checked into a public GitHub repository before submission.
+Git, with public repository hosting on GitHub.
 
 ## C5 Software Code Languages, Tools And Services Used
 
@@ -26,8 +26,8 @@ Python >=3.10. Dependencies are listed in `requirements.txt`, `environment.yml`,
 
 ## C7 Link To Developer Documentation/Manual
 
-TODO - author confirmation required after GitHub publication. Local documentation is under `docs/`.
+https://github.com/ttoa0718/Lake-Semantic-Cube/tree/main/docs
 
 ## C8 Support Email For Questions
 
-TODO - author confirmation required. `[SUPPORT EMAIL TO BE CONFIRMED]`.
+ttoa0718@163.com

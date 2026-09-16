@@ -14,6 +14,7 @@ Lake Semantic Cube organizes multidimensional lake water-environment data, gener
 - Point semantic query and region-scale semantic thickness query.
 - Streamlit GUI and Flask map UI.
 - Automated tests and synthetic demo.
+- Manuscript-facing interface screenshots.
 
 ## Supported Workflows
 
@@ -37,6 +38,10 @@ See `README.md` and `docs/installation.md`.
 ## Example Workflows
 
 See `examples/README.md` and `docs/reproducibility.md`.
+
+## Screenshots
+
+Screenshots are included under `docs/figures/`.
 
 ## Test Status
 

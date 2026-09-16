@@ -7,6 +7,8 @@
 - `.env.example` uses environment variables and placeholders.
 - `src/lake_semantic_cube/catalog/odc_core.py` now uses `DATACUBE_EXE` or `datacube` instead of a hard-coded local ODC path.
 - GUI ODC defaults now use `DATACUBE_EXE`, `LAKE_SEMANTIC_PYTHON`, or the current Python interpreter.
+- Copyright, support email, and GitHub repository URL have been confirmed.
+- Interface screenshots are included under `docs/figures/`.
 
 ## Still Requires Author Review Before Public GitHub Release
 
@@ -15,6 +17,7 @@
 - Existing historical/report files may mention local paths; they should be excluded from the public release unless sanitized.
 - Shapefile XML metadata under `ctshp/` contains historical local GIS lineage paths; remove XML metadata or sanitize before release if the shapefile is published.
 - Large local EFDC, full remote-sensing scene collections, and generated outputs should not be committed to GitHub. The curated `examples/sample_data/` subset is intentionally small and excludes shapefile XML metadata with local GIS lineage.
+- Zenodo DOI should be added after Zenodo generates the DOI for the GitHub release.
 
 ## Sensitive Information Scan
 
